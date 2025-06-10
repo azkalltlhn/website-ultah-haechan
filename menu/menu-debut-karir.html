@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detail Menu Debut dan Karir</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+      color: black;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background-color: #d3eee2;
+      color: white;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sidebar h2 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 6px;
+      transition: background 0.3s;
+      font-size: 14px;
+    }
+
+    .sidebar a:hover,
+    .sidebar a.active {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .sidebar .section-title {
+      font-size: 12px;
+      margin: 20px 0 10px;
+      text-transform: uppercase;
+      opacity: 0.7;
+    }
+
+    .user-info {
+      margin-top: auto;
+      font-size: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      padding-top: 10px;
+    }
+
+    /* Konten */
+    .main-content {
+      flex: 1;
+      background-color: #f9f9f9;
+      overflow-y: auto;
+      padding: 40px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 20px;
+      color: black;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .back-link i {
+      margin-right: 8px;
+    }
+
+    .page-title {
+      font-size: 24px;
+      color: red;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .badge {
+      background-color: #d3eee2;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+    }
+
+    .date {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .btn-platform {
+      background-color: #FEC107;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .btn-platform:hover {
+      background-color: #e6b200;
+    }
+
+    .logo-img {
+      display: block;
+      max-width: 200px;
+      margin: 0 auto 20px;
+      border: 4px solid #ccc;
+      border-radius: 10px;
+
+      /* Perubahan: naikkan gambar */
+      position: relative;
+      top: -40px;
+    }
+
+    h4 {
+      font-size: 16px;
+      margin-top: 24px;
+      color: black;
+    }
+
+    p, li {
+      font-size: 14px;
+      color: black;
+      line-height: 1.6;
+      position: relative;
+      top: -40px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* Scrollbar untuk konten */
+    .main-content::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .main-content::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+    }
+
+      /* Media Queries untuk responsivitas */
+      @media (max-width: 768px) { /* Untuk tablet dan HP */
+      .main-content {
+        margin: 10px; /* Kurangi margin di layar kecil */
+        padding: 15px; /* Kurangi padding di layar kecil */
+      }
+
+      .page-title {
+        font-size: 20px; /* Ukuran judul lebih kecil di HP */
+      }
+
+      .logo-img {
+        max-width: 150px; /* Ukuran gambar lebih kecil di HP */
+      }
+    }
+
+    @media (max-width: 480px) { /* Untuk HP */
+      .main-content {
+        margin: 5px; /* Margin lebih kecil di HP */
+        padding: 10px; /* Padding lebih kecil di HP */
+      }
+
+      p, li {
+        font-size: 13px; /* Ukuran teks lebih kecil di HP */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Konten -->
+  <div class="main-content">
+    <a href="../index.html" class="back-link">
+      <i class="fa fa-arrow-left" aria-hidden="true"></i>
+      Kembali ke halaman utama
+    </a>
+      
+    <h2 class="page-title">Debut dan Karir Haechan</h2>      
+
+    <div class="card">
+      <img class="logo-img" src="../img/haechan-debut-karir-2.jpg" />
+
+      <ul>
+
+        <li>
+            <strong>2013: Mengikuti Audisi SM Entertainment</strong><br>
+            Sejak kecil, Ibu Haechan memang selalu mendorong anak pertamanya itu mewujudkan impiannya 
+            sebagai penyanyi. Yap, Haechan benar-benar tumbuh di keluarga yang mendukung segala mimpinya. 
+            Atas dasar itulah, Haechan di usia ke-13 tahun, begitu berani mengikuti audisi di SM Entertainment 
+            yang dielu-elukan sebagai agensi hiburan idol K-Pop terbesar di Korea Selatan. Saat audisi, Haechan 
+            membawakan lagu “Hello” milik solois Huh Gak
+            Audisi yang diikuti Haechan bukanlah audisi biasa, melainkan ‘Saturday Auditions’ yang dianggap 
+            sebagai audisi paling sulit untuk dapat lolos. Hal tersebut karena selama audisi, dinilai secara langsung 
+            oleh Lee Soo Man, pendiri SM Entertainment. Namun siapa sangka, Haechan langsung dapat lolos ke babak 
+            selanjutnya!
+        </li>
+
+        <br>
+
+        <li>
+            <strong>2014: Diperkenalkan Sebagai Bagian Dari Proyek SM Rookies</strong><br>
+            Pada 17 Juli, Haechan akhirnya diperkenalkan ke publik sebagai bagian dari proyek pre-debut 
+            SM Entertainment bertajuk SM Rookies. 
+            Setahun kemudian, Haechan dan member NCT yang kala itu masih menjadi bagian dari SM Rookies, 
+            juga didapuk sebagai Mouseketeer di program “The Mickey Mouse Club” yang tayang di Disney Channel Korea. 
+            Program acara ini memiliki konsep berupa penampilan musik dan menari oleh para Mouseketeer.
+            Para Mouseketeer ini terdiri dari 9 member SM Rookies yakni Mark Lee, Jeno, Haechan, Jaemin, 
+            Jisung, Koeun, Hina, Herin, dan Lami. Sayangnya, keempat trainee perempuan SM Rookies ini 
+            tidak bisa debut di bawah naungan SM Entertainment.
+        </li>
+
+        <br>
+
+        <li>
+            <strong>2016: Berhasil Debut Bersama NCT 127 dan NCT Dream</strong><br>
+            Tepat pada 7 Juli, akhirnya Haechan berhasil debut bersama grup NCT dengan unit NCT 127 yang berbasis 
+            di Seoul. Nomor “127” itu mengacu pada koordinat garis bujur kota Seoul.
+            NCT 127 ini beranggotakan 10 member yakni Taeil, Johnny, Taeyong, Yuta, Jaehyun, Doyoung, Winwin, Jungwoo, 
+            Mark, dan Haechan. Di grup tersebut, Haechan memiliki posisi sebagai vokalis utama dan penari utama. 
+            Debut NCT 127 merilis lagu utama berjudul “Fire Truck” dan beberapa lagu lainnya seperti “Once Again” 
+            serta “Switch”. Lagu debut mereka langsung menduduki puncak Gaon Music Chart dan peringkat ke-2 di Billboard 
+            World Albums Chart dengan total penjualan lebih dari 80.000 album.
+            
+            <br>
+            <br>
+            Sebulan setelah itu, tepatnya pada 18 Agustus, pihak SM Entertainment merilis pengumuman akan 
+            debutnya unit NCT Dream yang beranggotakan 7 member. Ketujuh member NCT Dream itu adalah Haechan, 
+            Mark, Jaemin, Jeno, Renjun, Chenle, dan Jisung. Sub-unit NCT Dream memang digadang-gadang hanya beranggotakan 
+            member yang masih remaja saja. Tidak hanya itu saja, bahkan dahulu saat masih awal debut, 
+            pihak SM Entertainment menjelaskan bahwa hanya di unit NCT Dream ini diadakan sistem graduate.
+
+
+            Artinya, member NCT Dream yang sudah berusia lebih dari 20 tahun, akan “lulus” dari sub-unit tersebut. 
+            Itu berarti, member NCT Dream akan mengalami pergantian secara terus-menerus mengingat sistem member NCT 
+            itu memang tidak terbatas. Namun akhirnya, pada tahun 2020, sistem graduate pada NCT Dream resmi diubah. 
+            Alhasil, member NCT Dream tetap bertujuh dan tidak akan diubah lagi.
+            
+            Selain itu, sistem member NCT yang unlimited alias tidak terbatas juga dihentikan seiring dengan 
+            berita akuisisi SM Entertainment yang terjadi akhir-akhir ini.
+        </li>
+
+        <br>
+
+        <li>
+            <strong>2018: Berpartisipasi Dalam Proyek NCT 2018</strong><br>
+            Pada tahun 2018, pihak SM Entertainment memperkenalkan adanya proyek NCT 2018 yang melibatkan 
+            seluruh 18 member NCT. Pada proyek ini sekaligus memperkenalkan 3 member NCT baru yakni Kun, 
+            Lucas, dan Jungwoo. Lee Haechan tentu saja turut andil dalam proyek ini termasuk dalam 
+            lagu “Go” (NCT Dream), “Touch” (NCT 127), dan “Black On Black” (NCT 2018).
+        </li>
+
+        <br>
+
+        <li>
+            <strong>2019: Debut Bersama NCT U Untuk Proyek SM Station</strong><br>
+            Pada tahun 2019 ini, Lee Haechan resmi debut bersama sub-unit NCT U yang beranggotakan Taeil, 
+            Doyoung, dan Jaehyun untuk lagu berjudul “Coming Home” yang merupakan bagian dari proyek 
+            SM Station X. Sistem member NCT ini mungkin sedikit membingungkan bagi orang awam. Singkatnya, 
+            member sub-unit NCT U memang dapat berubah-ubah sesuai dengan comeback dan lagu yang akan dirilis. 
+            NCT U mengacu “kesatuan member” supaya setiap member dapat ‘merasakan’ debut dengan orang dan 
+            genre musik berbeda.
+        </li>
+
+        <br>
+
+        <li>
+            <strong>2020: Berpartisipasi Dalam Proyek NCT 2020</strong><br>
+            Pada tahun 2020, Lee Haechan lagi-lagi berpartisipasi dalam proyek NCT 2020 yang tentunya 
+            sekaligus memperkenalkan 2 member baru yakni Sungchan dan Shotaro sehingga total keseluruhan 
+            member NCT adalah 23 orang, termasuk member WayV. Proyek NCT 2020 ini pada dasarnya 
+            konsepnya sama dengan NCT 2018 yang mana menggabungkan seluruh member dari sub-unit yang ada 
+            menjadi satu penampilan. Pada proyek NCT 2020 ini merilis album bertajuk NCT 2020: Resonance 
+            dengan lagu utama “Resonance” dan beberapa lagu lainnya seperti “Make A Wish (Birthday Song), 
+            “90’s Song”, “Work It”, “Raise The Roof”, dan “Misfit”. Lee Haechan sendiri telah turut andil dalam lagu “Resonance” dan “90’s Song”.
+        </li>
+      </ul>
+
+      <br>
+      
+      <p>
+        Sumber: Gramedia <a href="https://www.gramedia.com/best-seller/lee-haechan/?srsltid=AfmBOoqwQwhmd-ZZ6Y0t-ukiC0tKIAKxm1YoDBqyHOtd6LcypzSd6TS7">(Link Informasi)</a>
+      </p>
+
+    </div>
+  </div>
+</body>
+</html>

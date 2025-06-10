@@ -1,0 +1,50 @@
+    .nav-link.active {
+          font-weight: bold;
+          color: black; /* Tailwind blue-500 */
+        }
+
+        .marquee {
+          white-space: nowrap;
+          overflow: hidden;
+          box-sizing: border-box;
+        }
+
+        .marquee span {
+          display: inline-block;
+          padding-left: 100%;
+          animation: marquee 12s linear infinite;
+        }
+
+        @keyframes marquee {
+          0%   { transform: translate(0, 0); }
+          100% { transform: translate(-100%, 0); }
+        }
+
+        #quizForm select:invalid {
+          color: gray;
+        }
+
+        /* --- Tambahan CSS untuk Responsivitas (Hamburger Menu) --- */
+      .nav-menu {
+        transition: transform 0.3s ease-in-out;
+      }
+      .nav-menu.hidden-mobile {
+        transform: translateX(100%);
+      }
+      @media (max-width: 767px) { /* Untuk layar HP (breakpoint Tailwind md) */
+        .nav-menu {
+          position: absolute;
+          top: 80px; /* Tinggi navbar */
+          right: 0;
+          width: 100%;
+          background-color: white;
+          flex-direction: column;
+          align-items: center;
+          padding: 1rem 0;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+          z-index: 10;
+        }
+        .nav-menu li {
+          margin: 0.5rem 0;
+        }
+      }

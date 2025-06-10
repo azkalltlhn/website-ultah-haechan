@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detail Kepribadian dan Julukan Haechan</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+      color: black;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background-color: #d3eee2;
+      color: white;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sidebar h2 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 6px;
+      transition: background 0.3s;
+      font-size: 14px;
+    }
+
+    .sidebar a:hover,
+    .sidebar a.active {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .sidebar .section-title {
+      font-size: 12px;
+      margin: 20px 0 10px;
+      text-transform: uppercase;
+      opacity: 0.7;
+    }
+
+    .user-info {
+      margin-top: auto;
+      font-size: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      padding-top: 10px;
+    }
+
+    /* Konten */
+    .main-content {
+      flex: 1;
+      background-color: #f9f9f9;
+      overflow-y: auto;
+      padding: 40px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 20px;
+      color: black;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .back-link i {
+      margin-right: 8px;
+    }
+
+    .page-title {
+      font-size: 24px;
+      color: red;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .badge {
+      background-color: #d3eee2;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+    }
+
+    .date {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .btn-platform {
+      background-color: #FEC107;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .btn-platform:hover {
+      background-color: #e6b200;
+    }
+
+    .logo-img {
+      display: block;
+      max-width: 200px;
+      margin: 0 auto 20px;
+      border: 4px solid #ccc;
+      border-radius: 10px;
+
+      /* Perubahan: naikkan gambar */
+      position: relative;
+      top: -40px;
+    }
+
+    h4 {
+      font-size: 16px;
+      margin-top: 24px;
+      color: black;
+    }
+
+    p, li {
+      font-size: 14px;
+      color: black;
+      line-height: 1.6;
+      position: relative;
+      top: -40px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* Scrollbar untuk konten */
+    .main-content::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .main-content::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+    }
+
+      /* Media Queries untuk responsivitas */
+      @media (max-width: 768px) { /* Untuk tablet dan HP */
+      .main-content {
+        margin: 10px; /* Kurangi margin di layar kecil */
+        padding: 15px; /* Kurangi padding di layar kecil */
+      }
+
+      .page-title {
+        font-size: 20px; /* Ukuran judul lebih kecil di HP */
+      }
+
+      .logo-img {
+        max-width: 150px; /* Ukuran gambar lebih kecil di HP */
+      }
+    }
+
+    @media (max-width: 480px) { /* Untuk HP */
+      .main-content {
+        margin: 5px; /* Margin lebih kecil di HP */
+        padding: 10px; /* Padding lebih kecil di HP */
+      }
+
+      p, li {
+        font-size: 13px; /* Ukuran teks lebih kecil di HP */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Konten -->
+  <div class="main-content">
+    <a href="../index.html" class="back-link">
+      <i class="fa fa-arrow-left" aria-hidden="true"></i>
+      Kembali ke halaman utama
+    </a>
+      
+    <h2 class="page-title">Kepribadian dan Julukan Haechan</h2>      
+
+    <div class="card">
+      <img class="logo-img" src="../img/haechan-kepribadian.jpg"/>
+
+      <p>
+        Ketika makan enak, tubuh Haechan tak bisa berhenti bergerak. Hal ini diketahui karena Haechan NCT 
+        memang memiliki kepribadian yang energik dan riang. Kepribadian yang terlihat di atas panggung ini 
+        ternyata sama dengan kepribadiannya dalam kehidupan sehari-hari. Selain menyukai hitsumabushi dan 
+        kimchi jjigae, nasi goreng ternyata masuk ke dalam makanan favorit Haechan NCT.
+      </p>
+
+      <br>
+
+      <p>
+        Idol yang satu ini memiliki kepribadian yang usil, karena ia memiliki golongan darah AB. 
+        Memang sudah bukan rahasia lagi jika pemilik golongan darah AB biasanya dikenal memiliki pola pikir 
+        yang sulit ditebak, sifat yang unik, tetapi setia kawan. Hal ini juga berlaku pada sosok 
+        Haechan NCT yang juga mempunyai golongan darah AB.
+      </p>
+
+      <br>
+
+      <p>
+        Pada sejumlah video yang menampilkan Haechan, kita dapat melihat bagaimana dirinya bertingkah aneh 
+        yang tak jarang membuat para member NCT yang lain merasa heran hingga geleng-geleng kepala. 
+        Namun, sifat dan tingkah laku Haechan yang seperti itulah yang membuatnya dicintai oleh para penggemar 
+        dan selalu berhasil membuat suasana grup menjadi lebih riang. Hal ini juga yang membuat Haechan NCT 
+        dijuluki seorang mood maker. 
+      </p>
+
+      <br>
+
+      <p>
+        Lee Haechan dikenal sebagai idol K-Pop yang memiliki suara unik. Haechan NCT dikenal memiliki 
+        suara yang berbeda dan istimewa. Oleh karena keunikannya, suara Haechan yang merdu itu dapat langsung 
+        dikenal ketika orang baru mendengarnya. Kemampuan vokal Haechan juga terbilang mumpuni, 
+        sehingga ia kerap kali diberikan nada-nada tinggi pada sejumlah lagu NCT.
+      </p>
+
+      <br>
+
+      <p>
+        Sosok Haechan juga sempat viral setelah membuat cover lagu Indonesia, yakni lagu “Cinta Luar Biasa” 
+        milik Andmesh Kamaleng yang populer sejak tahun 2019 lalu. Hal ini sontak membuat para fansnya 
+        dari Indonesia semakin kagum dengan sosok Haechan dan juga Doyoung NCT yang menyanyi 
+        bersama Haechan dalam video cover musik tersebut. Yuk tonton videonya pada link berikut: 
+        <a href="https://youtu.be/ruGhshs4Us8?si=2OQvdh1sbz1PoBhs">Klik di sini</a>          
+      </p>
+
+      <br>
+
+      <p>
+        Sumber: Gramedia <a href="https://www.gramedia.com/best-seller/profil-lee-haechan-nct/?srsltid=AfmBOoqcOfz0_88yXy_mgT9ttcI2vuXoIbVrhm2X8fGFIG61lxdfcUCU">(Link Informasi)</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

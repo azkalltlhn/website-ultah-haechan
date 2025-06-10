@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detail Quotes Haechan</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+      color: black;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background-color: #d3eee2;
+      color: white;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sidebar h2 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 6px;
+      transition: background 0.3s;
+      font-size: 14px;
+    }
+
+    .sidebar a:hover,
+    .sidebar a.active {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .sidebar .section-title {
+      font-size: 12px;
+      margin: 20px 0 10px;
+      text-transform: uppercase;
+      opacity: 0.7;
+    }
+
+    .user-info {
+      margin-top: auto;
+      font-size: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      padding-top: 10px;
+    }
+
+    /* Konten */
+    .main-content {
+      flex: 1;
+      background-color: #f9f9f9;
+      overflow-y: auto;
+      padding: 40px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 20px;
+      color: black;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .back-link i {
+      margin-right: 8px;
+    }
+
+    .page-title {
+      font-size: 24px;
+      color: red;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .badge {
+      background-color: #d3eee2;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+    }
+
+    .date {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .btn-platform {
+      background-color: #FEC107;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .btn-platform:hover {
+      background-color: #e6b200;
+    }
+
+    .logo-img {
+      display: block;
+      max-width: 200px;
+      margin: 0 auto 20px;
+      border: 4px solid #ccc;
+      border-radius: 10px;
+
+      /* Perubahan: naikkan gambar */
+      position: relative;
+      top: -40px;
+    }
+
+    h4 {
+      font-size: 16px;
+      margin-top: 24px;
+      color: black;
+    }
+
+    p, li {
+      font-size: 14px;
+      color: black;
+      line-height: 1.6;
+      position: relative;
+      top: -40px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* Scrollbar untuk konten */
+    .main-content::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .main-content::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+    }
+      /* Media Queries untuk responsivitas */
+      @media (max-width: 768px) { /* Untuk tablet dan HP */
+      .main-content {
+        margin: 10px; /* Kurangi margin di layar kecil */
+        padding: 15px; /* Kurangi padding di layar kecil */
+      }
+
+      .page-title {
+        font-size: 20px; /* Ukuran judul lebih kecil di HP */
+      }
+
+      .logo-img {
+        max-width: 150px; /* Ukuran gambar lebih kecil di HP */
+      }
+    }
+
+    @media (max-width: 480px) { /* Untuk HP */
+      .main-content {
+        margin: 5px; /* Margin lebih kecil di HP */
+        padding: 10px; /* Padding lebih kecil di HP */
+      }
+
+      p, li {
+        font-size: 13px; /* Ukuran teks lebih kecil di HP */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Konten -->
+  <div class="main-content">
+    <a href="../index.html" class="back-link">
+      <i class="fa fa-arrow-left" aria-hidden="true"></i>
+      Kembali ke halaman utama
+    </a>
+      
+    <h2 class="page-title">Quotes dari Haechan</h2>      
+
+    <div class="card">
+      <img class="logo-img" src="../img/haechan-debut-karir.jpg"/>
+
+      <p style="font-weight: bold;">
+        Berikut merupakan quotes dari Haechan:
+      </p>
+
+      <ul style="margin-top: 10px;">
+        <li>Don't be afraid to fail, be afraid not to try. – Haechan.
+        <li>My eyes are filled with certainty. You know this too, we can handle anything. 
+            My dream has come true, so now I can fly freely. – Haechan.</li>
+        <li>Even though I'm tall (in your life priority), I'm still number 3. Even though I'm tall, 
+            I have to be in 3rd position, that's the maximum, no matter how high. I should be number 3 
+            for your priority. 1 and 2 are your family and work. I am only your healing, which makes me 
+            your hobby, your comfort zone. That's what I think that I exist for these kinds of things. – Haechan.</li>
+        <li>Each person should take an unflattering photo of the other person. – Haechan.</li>
+        <li>If there is a fear that keeps you closed, I think if you can be more open, maybe you can try more 
+            things and be able to store new experiences. – Haechan.</li>
+        <li>Don't have a sweet dream just sleep well. -Haechan.</li>
+      </ul>
+
+      <br>
+      <p>
+        Sumber: Sragen Kedai <a href="https://sragenupdate.pikiran-rakyat.com/gaya-hidup/pr-1846187066/7-quote-haechan-tentang-mimpi-kegagalan-cinta-dan-prioritas-dalam-bahasa-inggris-indonesia?page=all">(Link Informasi)</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

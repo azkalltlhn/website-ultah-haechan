@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Import Tailwind & Poppins -->
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/website-haechan-css.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              poppins: ['Poppins', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="text-gray-900 font-poppins">
+  <!-- Top Banner -->
+    <div class="bg-[#d3eee2] text-center py-2 text-sm font-regular marquee">
+  <span id="countdown"></span>
+</div>
+
+<nav class="flex items-center justify-between p-4 bg-white shadow-md" style="height: 80px; padding-right: 60px;">
+  <img src="img/logo-azka.png" alt="Logo Azka" class="w-40 h-40 rounded-full object-cover"/>
+  <ul id="navMenu" class="flex space-x-6 text-gray-700 font-medium">
+    <li><a href="#home" class="nav-link">Home</a></li>
+    <li><a href="#about" class="nav-link">About</a></li>
+    <li><a href="#galeri" class="nav-link">Galeri Haechan</a></li>
+    <li><a href="#quiz" class="nav-link">Quiz</a></li>
+  </ul>
+</nav>
+
+  <!-- Hero Section -->
+  <section class="bg-[#a4bdfb] p-6 text-white flex flex-col md:flex-row justify-between items-center">
+    <div class="max-w-2xl">
+      <h2 class="text-xl font-bold mb-2 text-black font-regular">#Lee Donghyuck</h2>
+      <p class="text-sm text-black font-regular">
+        Haechan adalah salah satu anggota boy group asal Korea Selatan yaitu NCT. NCT berada di bawah naungan 
+        agensi SM Entertainment. Ia dikenal sebagai vokalis utama di beberapa sub-unit NCT, termasuk NCT 127 dan 
+        NCT DREAM. Lahir pada 6 Juni 2000 dengan nama asli Lee Donghyuck, Haechan memiliki suara yang unik dan khas, 
+        yang membuatnya mudah dikenali di antara anggota lainnya. Selain kemampuan vokalnya yang luar biasa, 
+        Haechan juga dikenal karena energinya yang ceria, selera humornya, serta kemampuan menari. 
+        Kepribadiannya yang karismatik dan kemampuannya untuk menciptakan suasana hangat di sekitarnya 
+        membuatnya disukai oleh banyak penggemar di seluruh dunia.
+      </p>
+    </div>
+    <div class="mt-4 md:mt-0">
+      <img src="img/haechanchildhood.png" alt="Haechan childhood" class="w-28 h-28 rounded-full object-cover"/>
+    </div>
+  </section>
+
+  <!-- Menu About Haechan -->
+  <section id="about" class="p-8">
+    <h2 class="text-center text-xl font-bold mb-2">About Haechan</h2>
+    <div class="border-b-4 border-[#a4bdfb] w-40 mx-auto mb-6"></div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+      <!-- Repeat cards -->
+      <div class="bg-white p-4 rounded shadow-md">
+       <a href="menu/menu-get-to-know.html">
+          <h3 class="font-semibold mb-1">Get to Know Haechan</h3>
+        </a>
+        <p>Berisi informasi Haechan seperti nama, tanggal lahir, dan sebagainya.</p>
+      </div>
+      <div class="bg-white p-4 rounded shadow-md">
+        <a href="menu/menu-debut-karir.html">
+          <h3 class="font-semibold mb-1">Debut dan Karir</h3>
+        </a>        
+        <p>Informasi awal perjalanan karir dan tanggal debut.</p>
+      </div>
+      <div class="bg-white p-4 rounded shadow-md">
+        <a href="menu/menu-peran-haechan.html">
+        <h3 class="font-semibold mb-1">Peran Haechan di NCT</h3>
+        </a>
+        <p>Informasi mengenai peran Haechan di NCT 127 dan NCT DREAM.</p>
+      </div>
+      <div class="bg-white p-4 rounded shadow-md">
+        <a href="menu/menu-kepribadian-julukan.html">
+          <h3 class="font-semibold mb-1">Kepribadian & Julukan</h3>
+        </a>
+        <p>Informasi tentang kepribadian dan julukannya.</p>
+      </div>
+      <div class="bg-white p-4 rounded shadow-md">
+        <a href="menu/menu-fakta-menarik.html">
+          <h3 class="font-semibold mb-1">Fakta Menarik</h3>
+        </a>
+        <p>Detail mengenai fakta menarik tentang Haechan.</p>
+      </div>
+      <div class="bg-white p-4 rounded shadow-md">
+       <a href="menu/menu-quotes.html">
+        <h3 class="font-semibold mb-1">Quotes from Haechan</h3>
+       </a>
+        <p>Kutipan dan kata-kata dari Haechan.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Galeri Haechan -->
+  <section id="galeri" class="px-8 py-6 text-center">
+    <div class="inline-block">
+      <h2 class="text-xl font-bold">Our Haechan Gallery</h2>
+      <div class="border-b-4 border-[#a4bdfb] mt-2 mb-5"></div>
+    </div>
+  </section>  
+  
+  <div class="flex justify-center gap-2 mb-6" id="galleryButtons">
+    <button data-target="childhood" class="gallery-btn bg-gray-300 px-4 py-1 rounded">Childhood</button>
+    <button data-target="predebut" class="gallery-btn bg-gray-100 px-4 py-1 rounded">Predebut</button>
+    <button data-target="stage" class="gallery-btn bg-gray-100 px-4 py-1 rounded">Stage Performance</button>
+    <button data-target="selca" class="gallery-btn bg-gray-100 px-4 py-1 rounded">Selca & Selfie</button>
+  </div>
+
+  <div id="childhood" class="gallery-section grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
+    <div class="w-full h-[400] overflow-hidden">
+      <img src="img/haechan-childhood-1.jpg" class="w-full h-full object-cover rounded shadow">
+    </div>
+    <div class="w-full h-[400] overflow-hidden">
+      <img src="img/haechan-childhood-2.jpg" class="w-full h-full object-cover rounded shadow">
+    </div>
+    <div class="w-full h-[400] overflow-hidden">
+      <img src="img/haechan-childhood-3.jpg" class="w-full h-full object-cover rounded shadow">
+    </div>
+    <div class="w-full h-[400] overflow-hidden">
+      <img src="img/haechan-childhood-4.jpg" class="w-full h-full object-cover rounded shadow">
+    </div>
+    <div class="w-full h-[400] overflow-hidden">
+      <img src="img/haechan-childhood-5.jpg" class="w-full h-full object-cover rounded shadow">
+    </div>
+    <div class="w-full h-[400] overflow-hidden">
+      <img src="img/haechan-childhood-6.jpg" class="w-full h-full object-cover rounded shadow">
+    </div>
+  </div>
+
+  <div id="predebut" class="gallery-section grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
+    <div class="w-full h-[400] overflow-hidden">
+      <img src="img/haechan-predebut-1.jpg" class="w-full h-full object-cover rounded shadow">
+    </div>
+    <div class="w-full h-[400] overflow-hidden">
+      <img src="img/haechan-predebut-2.jpg" class="w-full h-full object-cover rounded shadow">
+    </div>
+    <div class="w-full h-[400] overflow-hidden">
+      <img src="img/haechan-predebut-3.jpg" class="w-full h-full object-cover rounded shadow">
+    </div>
+    <div class="w-full h-[400] overflow-hidden">
+      <img src="img/haechan-predebut-4.jpg" class="w-full h-full object-cover rounded shadow">
+    </div>
+    <div class="w-full h-[400] overflow-hidden">
+      <img src="img/haechan-predebut-5.jpg" class="w-full h-full object-cover rounded shadow">
+    </div>
+    <div class="w-full h-[400] overflow-hidden">
+      <img src="img/haechan-predebut-6.jpg" class="w-full h-full object-cover rounded shadow">
+    </div>
+  </div>
+
+  <div id="stage" class="gallery-section grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
+    <div class="w-full h-[400] overflow-hidden">
+      <img src="img/haechan-stage-1.jpg" class="w-full h-full object-cover rounded shadow">
+    </div>
+    <div class="w-full h-[400] overflow-hidden">
+      <img src="img/haechan-stage-2.jpg" class="w-full h-full object-cover rounded shadow">
+    </div>
+    <div class="w-full h-[400] overflow-hidden">
+      <img src="img/haechan-stage-3.jpg" class="w-full h-full object-cover rounded shadow">
+    </div>
+    <div class="w-full h-[400] overflow-hidden">
+      <img src="img/haechan-stage-4.jpg" class="w-full h-full object-cover rounded shadow">
+    </div>
+    <div class="w-full h-[400] overflow-hidden">
+      <img src="img/haechan-stage-5.jpg" class="w-full h-full object-cover rounded shadow">
+    </div>
+    <div class="w-full h-[400] overflow-hidden">
+      <img src="img/haechan-stage-6.jpg" class="w-full h-full object-cover rounded shadow">
+    </div>
+  </div>
+
+  <div id="selca" class="gallery-section grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
+    <div class="w-full h-[400] overflow-hidden">
+      <img src="img/haechan-selca-1.jpg" class="w-full h-full object-cover rounded shadow">
+    </div>
+    <div class="w-full h-[400] overflow-hidden">
+      <img src="img/haechan-selca-2.jpg" class="w-full h-full object-cover rounded shadow">
+    </div>
+    <div class="w-full h-[400] overflow-hidden">
+      <img src="img/haechan-selca-3.jpg" class="w-full h-full object-cover rounded shadow">
+    </div>
+    <div class="w-full h-[400] overflow-hidden">
+      <img src="img/haechan-selca-4.jpg" class="w-full h-full object-cover rounded shadow">
+    </div>
+    <div class="w-full h-[400] overflow-hidden">
+      <img src="img/haechan-selca-5.jpg" class="w-full h-full object-cover rounded shadow">
+    </div>
+    <div class="w-full h-[400] overflow-hidden">
+      <img src="img/haechan-selca-6.jpg" class="w-full h-full object-cover rounded shadow">
+    </div>
+  </div>
+
+<!-- Quiz Singkat -->
+<section id="quiz" class="px-8 py-6 text-center">
+  <div class="inline-block">
+    <h2 class="text-xl font-bold">Quiz Tentang Haechan</h2>
+    <div class="border-b-4 border-[#a4bdfb] mt-2 mb-5"></div>
+  </div>
+</section>  
+  
+<form id="quizForm" class="space-y-4 text-left mt-1" style="padding-left: 30px;" onsubmit="return false;">
+  <div class="question mb-8" id="q1">
+    <p class="font-semibold mb-2">1. Siapa nama lengkap Haechan?</p>
+    <select name="q1" class="border border-gray-300 rounded px-3 py-2 w-full max-w-sm">
+      <option value="">Select an answer</option>
+      <option value="Lee Donghyuck">Lee Donghyuck</option>
+      <option value="Lee Taeyong">Lee Taeyong</option>
+      <option value="Lee Jeno">Lee Jeno</option>
+    </select>
+    <button onclick="checkAnswer(1, 'Lee Donghyuck')" class="bg-[#3b82f6] hover:bg-[#2563eb] text-white px-4 py-2 rounded mt-2 block">
+      Submit
+    </button>
+  </div>
+
+  <div class="question hidden mb-8" id="q2">
+    <p class="font-semibold mb-2">2. Kapan ulang tahun Haechan?</p>
+    <select name="q2" class="border border-gray-300 rounded px-3 py-2 w-full max-w-sm">
+      <option value="">Select an answer</option>
+      <option value="5 Juni">5 Juni 2000</option>
+      <option value="6 Juni">6 Juni 2000</option>
+      <option value="7 Juni">7 Juni 2000</option>
+    </select>
+    <button onclick="checkAnswer(2, '6 Juni')" class="bg-[#3b82f6] hover:bg-[#2563eb] text-white px-4 py-2 rounded mt-2 block">
+      Submit
+    </button>
+  </div>
+
+  <div class="question hidden mb-8" id="q3">
+    <p class="font-semibold mb-2">3. Apa warna favorit Haechan?</p>
+    <select name="q3" class="border border-gray-300 rounded px-3 py-2 w-full max-w-sm">
+      <option value="">Select an answer</option>
+      <option value="Merah">Merah</option>
+      <option value="Kuning">Kuning</option>
+      <option value="Hijau">Hijau</option>
+    </select>
+    <button onclick="checkAnswer(3, 'Merah')" class="bg-[#3b82f6] hover:bg-[#2563eb] text-white px-4 py-2 rounded mt-2 block">
+      Submit
+    </button>
+  </div>
+
+  <div class="question hidden mb-8" id="q4">
+    <p class="font-semibold mb-2">4. Apa posisi Haechan dalam grup?</p>
+    <select name="q4" class="border border-gray-300 rounded px-3 py-2 w-full max-w-sm">
+      <option value="">Select an answer</option>
+      <option value="Leader">Leader</option>
+      <option value="Vocal">Vocal</option>
+      <option value="Rapper">Rapper</option>
+    </select>
+    <button onclick="checkAnswer(4, 'Vocal')" class="bg-[#3b82f6] hover:bg-[#2563eb] text-white px-4 py-2 rounded mt-2 block">
+      Submit
+    </button>
+  </div>
+
+  <div class="question hidden mb-8" id="q5">
+    <p class="font-semibold mb-2">5. Haechan berada di grup apa?</p>
+    <select name="q5" class="border border-gray-300 rounded px-3 py-2 w-full max-w-sm">
+      <option value="">Select an answer</option>
+      <option value="NCT 127 and NCT Dream">NCT 127 and NCT Dream</option>
+      <option value="EXO and SuperM">EXO and SuperM</option>
+      <option value="WayV and NCT U">WayV and NCT U</option>
+    </select>
+    <button onclick="checkAnswer(5, 'NCT 127 and NCT Dream')" class="bg-[#3b82f6] hover:bg-[#2563eb] text-white px-4 py-2 rounded mt-2 block">
+      Submit
+    </button>
+  </div>
+
+  <div class="question hidden mb-8" id="q6">
+    <p class="font-semibold mb-2">6. Tahun berapa Haechan debut?</p>
+    <select name="q6" class="border border-gray-300 rounded px-3 py-2 w-full max-w-sm">
+      <option value="">Select an answer</option>
+      <option value="2016">2016</option>
+      <option value="2017">2017</option>
+      <option value="2018">2018</option>
+    </select>
+    <button onclick="checkAnswer(6, '2016')" class="bg-[#3b82f6] hover:bg-[#2563eb] text-white px-4 py-2 rounded mt-2 block">
+      Submit
+    </button>
+  </div>
+
+  <div class="question hidden mb-8" id="q7">
+    <p class="font-semibold mb-2">7. Apa makanan favorit Haechan</p>
+    <select name="q7" class="border border-gray-300 rounded px-3 py-2 w-full max-w-sm">
+      <option value="">Select an answer</option>
+      <option value="Pizza">Pizza</option>
+      <option value="Burger">Burger</option>
+      <option value="Samgyeopsal">Samgyeopsal</option>
+    </select>
+    <button onclick="checkAnswer(7, 'Samgyeopsal')" class="bg-[#3b82f6] hover:bg-[#2563eb] text-white px-4 py-2 rounded mt-2 block">
+      Submit
+    </button>
+  </div>
+
+  <div class="question hidden mb-8" id="q8">
+    <p class="font-semibold mb-2">8. Apa julukan yang sering diberikan kepada Haechan oleh fans?</p>
+      <select name="q8" class="border border-gray-300 rounded px-3 py-2 w-full max-w-sm">
+        <option value="">Select an answer</option>
+        <option value="Mood Maker">Mood Maker</option>
+        <option value="King of Dance">King of Dance</option>
+        <option value="Silent Leader">Silent Leader</option>
+      </select>
+      <button onclick="checkAnswer(8, 'Mood Maker')" class="bg-[#3b82f6] hover:bg-[#2563eb] text-white px-4 py-2 rounded mt-2 block">
+        Submit
+      </button>
+  </div>
+
+  <div class="question hidden mb-8" id="q9">
+    <p class="font-semibold mb-2">9. Apa zodiak Haechan?</p>
+    <select name="q9" class="border border-gray-300 rounded px-3 py-2 w-full max-w-sm">
+      <option value="">Select an answer</option>
+      <option value="Cancer">Cancer</option>
+      <option value="Gemini">Gemini</option>
+      <option value="Taurus">Taurus</option>
+    </select>
+    <button onclick="checkAnswer(9, 'Gemini')" class="bg-[#3b82f6] hover:bg-[#2563eb] text-white px-4 py-2 rounded mt-2 block">
+      Submit
+    </button>
+  </div>
+
+  <div class="question hidden mb-8" id="q10">
+    <p class="font-semibold mb-2">10. Siapa role model Haechan di dunia musik?</p>
+    <select name="q10" class="border border-gray-300 rounded px-3 py-2 w-full max-w-sm">
+      <option value="">Select an answer</option>
+      <option value="Michael Jackson">Michael Jackson</option>
+      <option value="Taeyang BIGBANG">Taeyang BIGBANG</option>
+      <option value="Kyuhyun Super Junior">Kyuhyun Super Junior</option>
+    </select>
+    <button onclick="checkAnswer(10, 'Michael Jackson')" class="bg-[#3b82f6] hover:bg-[#2563eb] text-white px-4 py-2 rounded mt-2 block">
+      Submit
+    </button>
+  </div>
+
+  <p id="quizResult" class="mt-6 mb-10 font-semibold"></p>
+    
+  </form>
+</section>
+
+  <footer class="bg-[#C8E4FF] w-full text-sm">
+    <div class="max-w-screen-xl mx-auto px-6 py-6">
+      <div class="flex flex-col md:flex-row justify-between items-start gap-8">
+        <!-- Logo -->
+        <div class="text-center md:text-left">
+          <img src="img/logo-azka.png" alt="Logo Azka" class="w-40 h-40 rounded-full object-cover">
+        </div>
+  
+        <!-- Contact Me -->
+        <div class="text-center md:text-left">
+          <p class="font-semibold mb-2">Contact Me</p>
+          <div class="space-y-2">
+            <p>
+              <i class="fab fa-instagram mr-2"></i>@cacaalh2
+            </p>
+            <p>
+              <i class="fas fa-envelope mr-2"></i>azkalilthn.work@gmail.com
+            </p>
+            <p>
+              <i class="fas fa-phone mr-2"></i>+62 821 1426 0548
+            </p>
+          </div>
+        </div>
+  
+        <!-- Copyright -->
+        <div class="text-center md:text-right mt-4 md:mt-0">
+          <p class="mt-4 md:mt-0">&copy; 2025 Azka Lailatul Hana</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+   <script>
+
+    
+
+    let score = 0;
+
+    function checkAnswer(questionNumber, correctAnswer) {
+      const select = document.querySelector(`select[name="q${questionNumber}"]`);
+      const selected = select.value;
+      const resultEl = document.getElementById('quizResult');
+      const button = document.querySelector(`#q${questionNumber} button`);
+
+      if (!selected) {
+        resultEl.innerHTML = '⚠️ Pilih jawaban dulu ya!';
+        return;
+      }
+
+      if (selected === correctAnswer) {
+        score++;
+        resultEl.innerHTML = "✔️ <span class='text-green-600'>Selamat, jawaban kamu benar!</span>";
+        button.disabled = true;
+
+        setTimeout(() => {
+          document.getElementById('q' + questionNumber).classList.add('hidden');
+          const nextQuestion = document.getElementById('q' + (questionNumber + 1));
+          if (nextQuestion) {
+            nextQuestion.classList.remove('hidden');
+            resultEl.textContent = '';
+          } else {
+            resultEl.innerHTML = `🎉 <span class='text-blue-600 font-semibold'>Quiz selesai! Terima kasih sudah menjawab.</span><br>Skor kamu: ${score} dari 10.`;
+          }
+        }, 1500);
+      } else {
+        resultEl.innerHTML = "❌ <span class='text-red-600'>Jawaban kamu salah, coba lagi.</span>";
+
+        // Tambahkan delay sebelum reset select
+        setTimeout(() => {
+          select.value = "";
+          resultEl.innerHTML = "";
+        }, 1500);
+      }
+    }
+  
+    const galleryButtons = document.querySelectorAll('.gallery-btn');
+      const gallerySections = document.querySelectorAll('.gallery-section');
+
+      function showGallery(targetId) {
+        gallerySections.forEach(section => {
+          section.classList.add('hidden');
+          if (section.id === targetId) {
+            section.classList.remove('hidden');
+          }
+        });
+
+        galleryButtons.forEach(btn => {
+          btn.classList.remove('bg-gray-300');
+          btn.classList.add('bg-gray-100');
+          if (btn.dataset.target === targetId) {
+            btn.classList.add('bg-gray-300');
+            btn.classList.remove('bg-gray-100');
+          }
+        });
+      }
+
+      window.addEventListener('DOMContentLoaded', () => {
+        showGallery('childhood');
+
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => link.classList.remove('active'));
+        const homeLink = document.querySelector('a[href="#home"]');
+        if (homeLink) {
+          homeLink.classList.add('active');
+        }
+      });
+
+      // ✅ Saat menu navbar diklik, atur yang aktif
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        });
+      });
+
+      galleryButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetId = btn.getAttribute('data-target');
+          showGallery(targetId);
+        });
+      });
+
+      const today = new Date();
+      const currentYear = today.getFullYear();
+
+      let birthday = new Date(currentYear, 5, 6); // 6 Juni
+
+      // Jika ulang tahun sudah lewat, ganti ke tahun depan
+      if (
+        today.getMonth() > 5 || 
+        (today.getMonth() === 5 && today.getDate() > 6)
+      ) {
+        birthday = new Date(currentYear + 1, 5, 6);
+      }
+
+      const oneDay = 24 * 60 * 60 * 1000;
+      const diffDays = Math.ceil((birthday - today) / oneDay);
+
+      const countdownSpan = document.getElementById('countdown');
+
+      if (today.getDate() === 6 && today.getMonth() === 5) {
+        countdownSpan.textContent = "Today its Haechan's Birthday! 🎂🎉";
+      } else {
+        countdownSpan.textContent = `${diffDays} hari lagi menuju Haechan's Birthday 🎉🎊`;
+      }
+</script>
+
+</body>
+</html>

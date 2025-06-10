@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detail Fakta Menarik tentang Haechan</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+      color: black;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background-color: #d3eee2;
+      color: white;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sidebar h2 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 6px;
+      transition: background 0.3s;
+      font-size: 14px;
+    }
+
+    .sidebar a:hover,
+    .sidebar a.active {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .sidebar .section-title {
+      font-size: 12px;
+      margin: 20px 0 10px;
+      text-transform: uppercase;
+      opacity: 0.7;
+    }
+
+    .user-info {
+      margin-top: auto;
+      font-size: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      padding-top: 10px;
+    }
+
+    /* Konten */
+    .main-content {
+      flex: 1;
+      background-color: #f9f9f9;
+      overflow-y: auto;
+      padding: 40px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 20px;
+      color: black;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .back-link i {
+      margin-right: 8px;
+    }
+
+    .page-title {
+      font-size: 24px;
+      color: red;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .badge {
+      background-color: #d3eee2;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+    }
+
+    .date {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .btn-platform {
+      background-color: #FEC107;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .btn-platform:hover {
+      background-color: #e6b200;
+    }
+
+    .logo-img {
+      display: block;
+      max-width: 200px;
+      margin: 0 auto 20px;
+      border: 4px solid #ccc;
+      border-radius: 10px;
+
+      /* Perubahan: naikkan gambar */
+      position: relative;
+      top: -40px;
+    }
+
+    h4 {
+      font-size: 16px;
+      margin-top: 24px;
+      color: black;
+    }
+
+    p, li {
+      font-size: 14px;
+      color: black;
+      line-height: 1.6;
+      position: relative;
+      top: -40px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* Scrollbar untuk konten */
+    .main-content::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .main-content::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+    }
+
+      /* Media Queries untuk responsivitas */
+      @media (max-width: 768px) { /* Untuk tablet dan HP */
+      .main-content {
+        margin: 10px; /* Kurangi margin di layar kecil */
+        padding: 15px; /* Kurangi padding di layar kecil */
+      }
+
+      .page-title {
+        font-size: 20px; /* Ukuran judul lebih kecil di HP */
+      }
+
+      .logo-img {
+        max-width: 150px; /* Ukuran gambar lebih kecil di HP */
+      }
+    }
+
+    @media (max-width: 480px) { /* Untuk HP */
+      .main-content {
+        margin: 5px; /* Margin lebih kecil di HP */
+        padding: 10px; /* Padding lebih kecil di HP */
+      }
+
+      p, li {
+        font-size: 13px; /* Ukuran teks lebih kecil di HP */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Konten -->
+  <div class="main-content">
+    <a href="../index.html" class="back-link">
+      <i class="fa fa-arrow-left" aria-hidden="true"></i>
+      Kembali ke halaman utama
+    </a>
+      
+    <h2 class="page-title">Fakta Menarik Tentang Haechan</h2>      
+
+    <div class="card">
+      <img class="logo-img" src="../img/haechan-fakta-menarik.jpg"/>
+
+      <p style="font-weight: bold;">
+        Berikut merupakan fakta menarik tentang Haechan:
+      </p>
+
+      <ul style="margin-top: 10px;">
+        <li>Lagu Replay milik SHINee adalah lagu yang menginspirasi Haechan untuk menjadi seorang artis.</li>
+        <li>Haechan pindah ke pulau Jeju pada usia 7 tahun dan tinggal di sana sampai usia 12 tahun.</li>
+        <li>Adik perempuan Haechan sebenarnya adalah saudara kembarnya.</li>
+        <li>Kedua orangtua Haechan juga jago bermain musik.</li>
+        <li>Haechan mulai belajar bermain piano sejak usia lima tahun.</li>
+        <li>Julukannya Full Sun berasal dari nama panggungnya, Hae yang berarti Matahari dan Chan yang berarti penuh.</li>
+        <li>Karakter utamanya di Overwatch adalah Junkrat dan Lucio. Dia suka bermain Overwatch dengan anggota lain.</li>
+        <li>Selama perilisan spesial STATION X pada 2 Desember 2019, ia diumumkan sebagai anggota terbaru NCT U.</li>
+        <li>Tipe ideal Haechan adalah seseorang yang pandai bernyanyi, memiliki suara yang mudah didengar, dan memiliki rambut pendek.</li>
+        <li>Haechan sering membersihkan asramanya. Paling sering bertanggung jawab untuk mencuci piring.</li>
+        <li>Haechan adalah anggota paling berisik yang menceriakan suasana grup.</li>
+        <li>Jaemin mengatakan ia akan memperkenalkan Haechan pada seorang adik perempuan. Karena menurut Jaemin, Haechan itu manis dan romantis.</li>
+        <li>Haechan sangat dekat dengan Mark sejak masa trainee.</li>
+        <li>Artis favorit Haechan adalah Michael Jackson, Donghae Super Junior, Jaehyun NCT, Siwon, Maroon 5, Dynamic Duo, dan SHINee.</li>
+        <li>Haechan suka bermain game meskipun tidak terlalu jago.</li>
+        <li>Anggota NCT mengatakan bahwa Haechan yang paling mirip beagle.</li>
+        <li>Fans menyumbangkan uang ke Kebun Binatang Los Angeles untuk memberi nama salah satu bayi pudus "Haechan."</li>
+        <li>Mark mengungkapkan bahwa Haechan pandai memasak.</li>
+        <li>Haechan berpikir ia memiliki nafsu makan terbesar di antara para anggota.</li>
+        <li>Cristiano Ronaldo adalah pemain sepak bola favoritnya.</li>
+        <li>Haechan telah menulis lirik lagu untuk waktu yang lama tetapi memiliki kekhawatiran tentang hal itu.</li>
+        <li>Bagi Haechan, ruang latihan adalah ruang rahasia dimana semuanya dimulai.</li>
+        <li>Haechan berpikir bagian rap dari Stronger adalah yang terbaik dari semua rap yang dia lakukan.</li>
+        <li>Haechan suka makan mi soba, terutama di musim panas.</li>
+        <li>Memiliki nama akun Instagram yang kreatif, yaitu @haechanahceah. Nah, jika dibaca secara terbalik dari belakang ke depan akan berarti "Haechan Haechan".</li>
+      </ul>
+
+      <br>
+      <p>
+        Sumber: Orami <a href="https://www.orami.co.id/magazine/lee-haechan">(Link Informasi)</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
